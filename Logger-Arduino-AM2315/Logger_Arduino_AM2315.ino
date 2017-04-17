@@ -145,7 +145,7 @@
 #define YELLOWLED 4                 // The yellow LED
 #define LEDPWR 7                    // This pin turns on and off the LEDs
 // Finally, here are the variables I want to change often and pull them all together here
-#define SOFTWARERELEASENUMBER "0.5.0"
+#define SOFTWARERELEASENUMBER "1.0.0"
 
 // Include application, user and local libraries
 #include <avr/sleep.h>              // For Sleep Code
@@ -244,7 +244,7 @@ void setup()
     WDTCSR|=_BV(WDCE) | _BV(WDE);           // This string works better than using wdt_disable();
     WDTCSR=0;                               // End of wdt commands
     Serial.begin(9600);                     // Initialize communications with the terminal
-    delay(200);                             // wait for Serial to initialize
+    delay(300);                             // wait for Serial to initialize
     Serial.println("");                     // Header information
     Serial.print(F("Connected Sensor Temp / Humidity - release ")); // I do this so I can see what release is fielded
     Serial.println(releaseNumber);          // when I am doing field checks
