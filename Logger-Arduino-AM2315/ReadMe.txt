@@ -46,15 +46,16 @@ The first word is for system data
 4        Daily Reading Pointer
 5-6      Current Hourly Reading Pointer (16-bit number)
 7        Control Register  (8 - 5 Reserved, 4- LEDs, 3-Start / Stop Test, 2-Warm Up, 1-LEDs)
-The second and thirs words are for storing the current data
+The second and third words are for storing the current data
 8        Current Temp
 9        Current Humidity
-10        Temp Low
+10       Temp Low
 11       Temp High
 12       Humid Low
 13       Humid High
 14-17    EPOCH Time when last counts recorded (32-bits)
-Words 3-30 are 28 days worth of daily counts - if this changes - need to change #offsets and DAILYCOUNTNUMBER
+18-23    Reserved
+Words 4-30 are 28 days worth of daily counts - if this changes - need to change #offsets and DAILYCOUNTNUMBER
 0        Month
 1        Day
 2        Daily Low Temp
